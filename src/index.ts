@@ -4,7 +4,7 @@ import AdyenCheckout from "@adyen/adyen-web";
 import { CheckoutConfiguration } from "./types";
 import { PaymentAction } from "@adyen/adyen-web/dist/types/types";
 
-export class Redirect {
+export class Checkout {
   private action: PaymentAction;
   private environment: string;
   private clientKey: string;

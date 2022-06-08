@@ -1,7 +1,7 @@
 {
-  "name": "@parcelaexpress/redirect-3ds-library-js",
+  "name": "@parcelaexpress/checkout-component-3ds",
   "version": "1.0.0",
-  "description": "Redirect 3ds library js",
+  "description": "Checkout component 3ds",
   "main": "build/index.js",
   "types": "build/types/index.d.ts",
   "scripts": {

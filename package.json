@@ -1,6 +1,6 @@
 {
   "name": "@parcelaexpress/checkout-component-3ds",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Checkout component 3ds",
   "main": "build/index.js",
   "types": "build/types/index.d.ts",

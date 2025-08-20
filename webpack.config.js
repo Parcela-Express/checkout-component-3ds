@@ -11,7 +11,7 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'build'),
-    library: "Checkout",
+    library: "Component",
     libraryTarget: 'umd',
     clean: true
   },

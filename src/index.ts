@@ -1,12 +1,15 @@
 import "./index.css";
 
-import AdyenCheckout from "@adyen/adyen-web";
+import {
+  AdyenCheckout,
+  CoreConfiguration,
+  PaymentAction,
+} from "@adyen/adyen-web";
 import { CheckoutConfiguration } from "./types";
-import { PaymentAction } from "@adyen/adyen-web/dist/types/types";
 
-export class Checkout {
+export class Checkout3ds {
   private action: PaymentAction;
-  private environment: string;
+  private environment: CoreConfiguration["environment"];
   private clientKey: string;
 
   constructor(config: CheckoutConfiguration) {
@@ -35,14 +38,15 @@ export class Checkout {
       size: "02",
     };
 
-    const configuration = {
+    const configuration: CoreConfiguration = {
       locale: "pt_BR",
+      countryCode: "pt-BR",
       environment: this.environment,
       clientKey: this.clientKey,
       onAdditionalDetails: () => {},
     };
 
-    const promise = new AdyenCheckout(configuration);
+    const promise = await AdyenCheckout(configuration);
     const checkout = await promise;
     checkout
       .createFromAction(this.action, threeDSConfiguration)

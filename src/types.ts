@@ -1,7 +1,7 @@
-import { PaymentAction } from "@adyen/adyen-web/dist/types/types";
+import { CoreConfiguration, PaymentAction } from '@adyen/adyen-web';
 
 export type CheckoutConfiguration = {
-  environment: string;
+  environment: CoreConfiguration["environment"];
   clientKey: string;
   action: PaymentAction;
 };

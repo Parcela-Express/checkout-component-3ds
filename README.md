@@ -1,29 +1,13 @@
 # Parcela Express Checkout Component 3ds
 
-[![npm](https://img.shields.io/npm/v/@parcelaexpress/checkout-component-3ds.svg)](https://www.npmjs.com/package/@parcelaexpress/checkout-component-3ds)
+## Importação
 
-## Instalação
-
-Esse pacote é um módulo [Node.js](https://nodejs.org/en/) disponibilizado pelo 
-[npm](https://www.npmjs.com/).
-
-Siga as instruções abaixo para realizar a instalação do componente em sua aplicação.
-
-1. Instale o componente [Parcela Express Checkout Component 3ds](https://www.npmjs.com/package/@parcelaexpress/checkout-component-3ds):
-
-  ```sh
-  npm install @parcelaexpress/checkout-component-3ds --save
-  ```
-
-  ```sh
-  yarn add @parcelaexpress/checkout-component-3ds
-  ```
-
-## Instalação
+Para importar o componente adicione o script
+*`<script src="https://parcela-sub-api-components.s3.us-east-1.amazonaws.com/checkout-component-3ds/v2.0.0/index.js"></script>`*
+ no body do seu site e importe o css através do link: 
+ *`<link rel="stylesheet" href="https://parcela-sub-api-components.s3.us-east-1.amazonaws.com/checkout-component-3ds/v2.0.0/index.css" />`*
 
 O componente pode ser usado da seguinte forma:
-
-Importe o componente dentro de sua aplicação e adicione uma div container para renderizar o componente:
 
 #### **`index.html`**
   ```html
@@ -59,6 +43,6 @@ const config = {
 
 
 
-const checkoutInstance = new window.Checkout.Checkout(config);
-checkoutInstance.mount('checkout-container');
+const checkoutInstance = new window.Component.Checkout3ds(config);
+checkoutInstance.mount("checkout-container");
   ```
